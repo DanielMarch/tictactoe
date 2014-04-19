@@ -2,10 +2,38 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Client Template
+    title Tic-Tac-Toe
     link(rel='stylesheet', href='./css/app.css')
   body
-    h1 Client Template
+    h1 Tic-Tac-Toe
+    button#newgame New Game
+    #styleboard
+      table#game
+        tbody#board
+          tr
+            td.place#1
+            td.place#2
+            td.place#3
+          tr
+            td.place#4
+            td.place#5
+            td.place#6
+          tr
+            td.place#7
+            td.place#8
+            td.place#9
+    #pieces
+      .xpieces
+        .X
+        .X
+        .X
+        .X
+        .X
+      .ypieces
+        .O
+        .O
+        .O
+        .O
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
