@@ -11,17 +11,17 @@ html(lang='en')
       table#game
         tbody#board
           tr
-            td.place#1
-            td.place#2
-            td.place#3
+            td.place.playable#0 0
+            td.place.playable#1 1
+            td.place.playable#2 2
           tr
-            td.place#4
-            td.place#5
-            td.place#6
+            td.place.playable#3 3
+            td.place.playable#4 4
+            td.place.playable#5 5
           tr
-            td.place#7
-            td.place#8
-            td.place#9
+            td.place.playable#6 6
+            td.place.playable#7 7
+            td.place.playable#8 8
     #pieces
       .xpieces
         .X
@@ -30,6 +30,7 @@ html(lang='en')
         .X
         .X
       .ypieces
+        .O
         .O
         .O
         .O

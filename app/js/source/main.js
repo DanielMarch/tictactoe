@@ -3,7 +3,6 @@
 
   var X = $('<img src="./media/X.png" class="piece player1">');
   var O = $('<img src="./media/O.png" class="piece player2">');
-
   var active = 'player1';
 
   $(document).ready(init);
@@ -14,6 +13,7 @@
   }
 
   function start(){
+    $('td').addClass('playable');
     $('.place').empty();
     $('.X').empty();
     $('.O').empty();
@@ -30,17 +30,18 @@
       $('.selected.piece').addClass('current');
       choose();
     }
-    move();
   }
 
   function move(){
+    $('.place').has('.piece').removeClass('playable');
     var $piece = $('.current');
     var $square = $(this);
-    $square.append($piece);
-    switchPlayer();
-    // debugger;
-    // $('.current').removeClass('current');
-    // $('.selected').removeClass('selected');
+    if ($($square).hasClass('playable')){
+      $square.append($piece);
+      switchPlayer();
+    }else{
+      alert('invalid move');
+    }
   }
 
   function switchPlayer(){
@@ -50,5 +51,4 @@
       active = 'player1';
     }
   }
-
 })();
