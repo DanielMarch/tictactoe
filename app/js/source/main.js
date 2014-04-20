@@ -54,35 +54,31 @@
   }
 
   function checkWin(){
-    var row1 = [$('#a1').html(), $('#a2').html(), $('#a3').html()];
-  	var row2 = [$('#b1').html(), $('#b2').html(), $('#b3').html()];
-  	var row3 = [$('#c1').html(), $('#c2').html(), $('#c3').html()];
-  	var col1 = [$('#a1').html(), $('#b1').html(), $('#c1').html()];
-  	var col2 = [$('#a2').html(), $('#b2').html(), $('#c2').html()];
-  	var col3 = [$('#a3').html(), $('#b3').html(), $('#c3').html()];
-  	var diag1 = [$('#a1').html(), $('#b2').html(), $('#c3').html()];
-  	var diag2 = [$('#c1').html(), $('#b2').html(), $('#a3').html()];
+    var row1 = [$('#a1'), $('#a2'), $('#a3')];
+    var row2 = [$('#b1'), $('#b2'), $('#b3')];
+    var row3 = [$('#c1'), $('#c2'), $('#c3')];
+    var col1 = [$('#a1'), $('#b1'), $('#c1')];
+    var col2 = [$('#a2'), $('#b2'), $('#c2')];
+    var col3 = [$('#a3'), $('#b3'), $('#c3')];
+    var diag1 = [$('#a1'), $('#b2'), $('#c3')];
+    var diag2 = [$('#c1'), $('#b2'), $('#a3')];
 
-    function win(){
-      console.log('yay, the code works!');
-    }
-
-  	if(row1[0] === 'X' && row1[1] === 'X' && row1[2] === 'X' || row1[0] === 'O' && row1[1] === 'O' && row1[2] === 'O'){
-      win();
-  	}else if(row2[0] === 'X' && row2[1] === 'X' && row2[2] === 'X' || row2[0] === 'O' && row2[1] === 'O' && row2[2] === 'O'){
-      win();
-  	}else if(row3[0] === 'X' && row3[1] === 'X' && row3[2] === 'X' || row3[0] === 'O' && row3[1] === 'O' && row3[2] === 'O'){
-      win();
-  	}else if(col1[0] === 'X' && col1[1] === 'X' && col1[2] === 'X' || col1[0] === 'O' && col1[1] === 'O' && col1[2] === 'O'){
-      win();
-  	}else if(col2[0] === 'X' && col2[1] === 'X' && col2[2] === 'X' || col2[0] === 'O' && col2[1] === 'O' && col2[2] === 'O'){
-      win();
-  	}else if(col3[0] === 'X' && col3[1] === 'X' && col3[2] === 'X' || col3[0] === 'O' && col3[1] === 'O' && col3[2] === 'O'){
-      win();
-  	}else if(diag1[0] === 'X' && diag1[1] === 'X' && diag1[2] === 'X' || diag1[0] === 'O' && diag1[1] === 'O' && diag1[2] === 'O'){
-      win();
-    }else if(diag2[0] === 'X' && diag2[1] === 'X' && diag2[2] === 'X' || diag2[0] === 'O' && diag2[1] === 'O' && diag2[2] === 'O'){
-      win();
+  	if(row1[0].children('.X') && row1[1].children('.X') && row1[2].children('.X') || row1[0].children('.O') && row1[1].children('.O') && row1[2].children('.O')){
+      console.log('win1');
+  	}else if(row2[0].children('.X') && row2[1].children('.X') && row2[2].children('.X') || row2[0].children('.O') && row2[1].children('.O') && row2[2].children('.O')){
+      console.log('win2');
+  	}else if(row3[0].children('.X') && row3[1].children('.X') && row3[2].children('.X') || row3[0].children('.O') && row3[1].children('.O') && row3[2].children('.O')){
+      console.log('win3');
+  	}else if(col1[0].children('.X') && col1[1].children('.X') && col1[2].children('.X') || col1[0].children('.O') && col1[1].children('.O') && col1[2].children('.O')){
+      console.log('win4');
+  	}else if(col2[0].children('.X') && col2[1].children('.X') && col2[2].children('.X') || col2[0].children('.O') && col2[1].children('.O') && col2[2].children('.O')){
+      console.log('win5');
+  	}else if(col3[0].children('.X') && col3[1].children('.X') && col3[2].children('.X') || col3[0].children('.O') && col3[1].children('.O') && col3[2].children('.O')){
+      console.log('win6');
+  	}else if(diag1[0].children('.X') && diag1[1].children('.X') && diag1[2].children('.X') || diag1[0].children('.O') && diag1[1].children('.O') && diag1[2].children('.O')){
+      console.log('win7');
+    }else if(diag2[0].children('.X') && diag2[1].children('.X') && diag2[2].children('.X') || diag2[0].children('.O') && diag2[1].children('.O') && diag2[2].children('.O')){
+      console.log('win8');
   	}
   }
 })();
