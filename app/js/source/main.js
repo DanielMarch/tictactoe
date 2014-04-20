@@ -64,21 +64,25 @@
     var diag2 = [$('#c1'), $('#b2'), $('#a3')];
 
   	if(row1[0].children('.X') && row1[1].children('.X') && row1[2].children('.X') || row1[0].children('.O') && row1[1].children('.O') && row1[2].children('.O')){
-      console.log('win1');
+      win();
   	}else if(row2[0].children('.X') && row2[1].children('.X') && row2[2].children('.X') || row2[0].children('.O') && row2[1].children('.O') && row2[2].children('.O')){
-      console.log('win2');
+      win();
   	}else if(row3[0].children('.X') && row3[1].children('.X') && row3[2].children('.X') || row3[0].children('.O') && row3[1].children('.O') && row3[2].children('.O')){
-      console.log('win3');
+      win();
   	}else if(col1[0].children('.X') && col1[1].children('.X') && col1[2].children('.X') || col1[0].children('.O') && col1[1].children('.O') && col1[2].children('.O')){
-      console.log('win4');
+      win();
   	}else if(col2[0].children('.X') && col2[1].children('.X') && col2[2].children('.X') || col2[0].children('.O') && col2[1].children('.O') && col2[2].children('.O')){
-      console.log('win5');
+      win();
   	}else if(col3[0].children('.X') && col3[1].children('.X') && col3[2].children('.X') || col3[0].children('.O') && col3[1].children('.O') && col3[2].children('.O')){
-      console.log('win6');
+      win();
   	}else if(diag1[0].children('.X') && diag1[1].children('.X') && diag1[2].children('.X') || diag1[0].children('.O') && diag1[1].children('.O') && diag1[2].children('.O')){
-      console.log('win7');
+      win();
     }else if(diag2[0].children('.X') && diag2[1].children('.X') && diag2[2].children('.X') || diag2[0].children('.O') && diag2[1].children('.O') && diag2[2].children('.O')){
-      console.log('win8');
+      win();
   	}
+  }
+
+  function win(){
+    console.log('Game Over');
   }
 })();
